@@ -164,10 +164,10 @@ export default function View(props) {
             >
                 <div className='w-full h-96 flex flex-col pt-5 gap-5 px-5'>
                     {view}
-                    
+
                     {props.form > 2 ? 
                     <button className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold' onClick={() => props.setForm(box => box +1)}>Submit</button> : 
-                    <button disabled={props.values.username === '' || props.values.password === '' } className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500' onClick={() => props.setForm(box => box +1)}>Next Step</button>
+                    <button className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500' onClick={() => props.setForm(box => box +1)}>Next Step</button>
                     }
 
                     {props.form > 1 ? 
