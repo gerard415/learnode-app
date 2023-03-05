@@ -1,0 +1,6 @@
+export {Header} from './Header'
+export {Sidebar} from './Sidebar'
+export {Main} from './Main'
+export {Category} from './Category'
+export {MainSubscriptions} from './MainSubscriptions'
+export {MainPosts} from './MainPosts'
