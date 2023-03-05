@@ -26,7 +26,7 @@ export default function View(props) {
     let view = null
 
     if(props.form === 1){
-        view = <Form1 handleChange={props.handleChange} values={props.values} handleBlur={props.handleBlur} />
+        view = <Form1/>
     }else if(props.form === 2){
         view = <Form2/>
     }else{
