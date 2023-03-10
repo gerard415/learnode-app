@@ -2,26 +2,26 @@ import React from 'react'
 
 export default function View(props) {
   return (
-    <div className='w-full grid grid-row-2 h-60'>
+    <div className='w-full video-card h-[220px]'>
       {props.image ?
-          <div className='h-max col-span-2'>
-            <img src={props.image} alt='' className='w-full cursor-pointer shadow-pop-bl' style={{height:'150px'}} />
+          <div className='h-[150px] col-span-2 overflow-hidden bg-gray-100 rounded-lg'>
+            <img src={props.image} alt='' className='w-full h-full cursor-pointer' style={{height:'150px'}} />
           </div>
           :
           ""
       }
-      <div className='grid grid-cols-12 col-span-2 h-full w-full gap-x-4'>
+      <div className='grid pt-3 grid-cols-12 col-span-2 items-start h-[70px] w-full gap-x-2'>
         {props.avatar ?
-            <div className='col-span-3'>
+            <div className='col-span-2'>
               <img src={props.avatar} alt='' style={{width:'37px', height:'37px'}}  className='rounded-full' />
             </div>
             :
             ""
           }
-        <div className='col-span-9 flex flex-col gap-2'>
+        <div className='col-span-10 flex flex-col gap-2'>
           <div>
             {props.title ?
-              <p className='text-sm font-bold text-ellipsis w-full text-white'>{props.title}</p>
+              <p className='text-md font-bold text-ellipsis w-full text-black'>{props.title}</p>
               :
               ""
             }

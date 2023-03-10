@@ -14,7 +14,7 @@ const LiveChannels = () => {
             <Card        
                 image={"https://i.pinimg.com/736x/72/a0/06/72a0062afba4bc71293859600003265b.jpg"} 
                 avatar={profile1}
-                title='CHARITY STREAM! Any support is ap...'
+                title='Learnode Tururial Part 2'
                 subtitle="Natt"
                 tag={[
                 {
@@ -36,7 +36,7 @@ const LiveChannels = () => {
             <Card        
                 image={"https://i.ytimg.com/vi/IGPzAKxtILA/maxresdefault.jpg"} 
                 avatar={profile2}
-                title='CHARITY STREAM! Any support is ap...'
+                title='Learnode Tururial Part 2'
                 subtitle="Natt"
                 tag={[
                 {
@@ -58,7 +58,7 @@ const LiveChannels = () => {
             <Card        
                 image={"https://i.ytimg.com/vi/MQH8en4c2pk/maxresdefault.jpg"} 
                 avatar={profile3}
-                title='CHARITY STREAM! Any support is ap...'
+                title='Learnode Tururial Part 2'
                 subtitle="Natt"
                 tag={[
                 {
@@ -103,7 +103,7 @@ const LiveChannels = () => {
 <Card        
                 image={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrWNn2zF56ehX0obRvbzN0I8rSzhDt7LvCQg&usqp=CAU"} 
                 avatar={profile1}
-                title='CHARITY STREAM! Any support is ap...'
+                title='Learnode Tururial Part 2'
                 subtitle="Natt"
                 tag={[
                 {
@@ -125,7 +125,7 @@ const LiveChannels = () => {
             <Card        
                 image={"https://i.ytimg.com/vi/485yYXLZqxc/mqdefault.jpg"} 
                 avatar={profile2}
-                title='CHARITY STREAM! Any support is ap...'
+                title='Learnode Tururial Part 2'
                 subtitle="Natt"
                 tag={[
                 {
@@ -147,7 +147,7 @@ const LiveChannels = () => {
             <Card        
                 image={"https://embed-ssl.wistia.com/deliveries/5279ea91ba79082360e8941013052566.webp?image_crop_resized=1280x720"} 
                 avatar={profile3}
-                title='CHARITY STREAM! Any support is ap...'
+                title='Learnode Tururial Part 2'
                 subtitle="Natt"
                 tag={[
                 {

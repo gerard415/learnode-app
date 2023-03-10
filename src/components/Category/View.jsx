@@ -3,9 +3,9 @@ import { CategoriesItem } from './CategoriesItem';
 
 export default function View(props) {
   return (
-    <div className='px-6 flex border-y border-gray-100 border-opacity-20 h-[480px] items-start justify-center overflow-hidden flex-col gap-5' >
-        <h2 className='text-xl font-semibold text-white'>
-            <span className='text-[#17c964]'>Categories</span> we have for you
+    <div className='px-6 flex border-y border-gray-200 h-[450px] items-start justify-center overflow-hidden flex-col gap-5' >
+        <h2 className='text-xl font-semibold text-black'>
+            Categories
         </h2>
         <div className='grid grid-cols-6 gap-3 '>
             <CategoriesItem

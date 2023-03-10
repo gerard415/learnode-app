@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Logo from '../../assets/logo.png'
+import Logo1 from '../../assets/Logo1.PNG'
 import {AiOutlineUser} from 'react-icons/ai'
 import { Modal } from 'antd';
 import {Form1, Form2, Form3} from '../SignupForms'
@@ -37,22 +38,16 @@ export default function View(props) {
         props.setForm(1)
     }
 
+
   return (
     <>
-        <div className='sticky w-full grid grid-cols-12 top-0 pr-5 bg-theme-light shadow h-[50px] z-10' >
-        <div className='flex col-span-3 text-white space-x-5 items-center' >
-            <img src={Logo} alt="" className='w-14'/>
-            <button className=' font-semibold text-learnode-link text-sm' >Browse</button>
-            <button className=' font-semibold text-learnode-link  text-sm' >Category</button>
-            <button className=''>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
-                </svg>
-            </button>
+        <div className='sticky w-full grid grid-cols-12 top-0 pr-5 bg-theme-light shadow h-[50px] z-50' >
+        <div className='flex col-span-3 text-black space-x-5 items-center' >
+            <img src={Logo} alt="" className='h-[50px]'/> earnode
         </div>
-        <div className='flex col-span-6 items-center justify-center' >
-            <input type="text" placeholder='Search' className='bg-gray-100 text-white bg-opacity-20 dark:bg-blend-lighten text-sm outline-none rounded-l w-[350px] h-[35px] pl-4  mr-[1px]' />
-            <button className=' bg-gray-100 bg-opacity-20 w-9 rounded-r h-[35px] text-white flex justify-center items-center' >
+        <div className='flex col-span-6 gap-2 items-center justify-center' >
+            <input type="text" placeholder='Search' className='bg-gray-100 ring-1 ring-gray-100  focus:ring-green-400 transition-all duration-300 text-black bg-opacity-20 dark:bg-blend-lighten text-sm outline-none rounded w-[350px] h-[35px] pl-4  mr-[1px]' />
+            <button className=' bg-gray-100 w-9 rounded h-[35px] text-black ring-1 focus:ring-2 ring-gray-100 flex justify-center items-center' >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>
@@ -60,14 +55,15 @@ export default function View(props) {
         </div>
         <div className='space-x-3 flex text-sm font-semibold col-span-3 justify-end items-center' >
             <button onClick={() => props.setLoginModalOpen(true)} className=' text-black bg-gray-100 rounded font-semibold  h-[30px] w-[65px]' >Log in</button>
-            <button onClick={() => props.setSignUpModalOpen(true)}  className='bg-learnode-green1 hover:bg-opacity-50 text-white rounded font-semibold  h-[30px] w-[75px] ' >Sign up</button>
-            <button className='text-white'  ><AiOutlineUser size={'20px'} /></button>
+            <button onClick={() => props.setSignUpModalOpen(true)}  className='bg-learnode-green1 hover:bg-opacity-100 bg-opacity-80 text-white rounded font-semibold  h-[30px] w-[75px] ' >Sign up</button>
+            <button className='text-black'  ><AiOutlineUser size={'20px'} /></button>
         </div>
         </div>
 
         <Modal
+            className="lgsn"
             title={
-                <div className="w-full text-3xl px-4 bg-theme-darker flex justify-between text-white  items-start">
+                <div className="w-full text-3xl px-4 bg-theme-darker flex justify-between text-black  items-start">
                     <div className='flex flex-col justify-center items-center w-full'>
                         <img src={Logo} alt="" className='w-20 inline-block'/>
                         Log in to Learnode
@@ -104,13 +100,13 @@ export default function View(props) {
             >
                 <div className='w-full h-96 flex flex-col pt-5 gap-5 px-5'>
                     <div className='w-full flex flex-col gap-2'>
-                        <div className='text-white font-semibold'>Username</div>
-                        <input className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 text-white bg-opacity-10 bg-white' />
+                        <div className='text-black font-semibold'>Username</div>
+                        <input className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 ring-1 ring-gray-400 text-black bg-opacity-10 bg-white' />
                     </div>
 
                     <div className='w-full flex flex-col gap-2'>
-                        <div className='text-white font-semibold'>Password</div>
-                        <input type="password" className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 text-white bg-opacity-10 bg-white' />
+                        <div className='text-black font-semibold'>Password</div>
+                        <input type="password" className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 ring-1 ring-gray-400 text-black bg-opacity-10 bg-white' />
                         <div className='text-green-400 text-xs hover:underline cursor-pointer mt-2 w-max'>Trouble signing in?</div>
                     </div>
 
@@ -119,7 +115,7 @@ export default function View(props) {
                     </button>
 
 
-                    <button className='w-full h-10 rounded-md bg-gray-50 bg-opacity-5 text-xs text-green-400' onClick={() => handleClick1()} >
+                    <button className='w-full h-10 rounded-md bg-gray-200 text-xs font-semibold text-green-400' onClick={() => handleClick1()} >
                         Don't have an account? Sign up
                     </button>
                 </div>
@@ -127,7 +123,7 @@ export default function View(props) {
 
         <Modal
             title={
-                <div className="w-full text-3xl px-4 bg-theme-darker flex justify-between text-white  items-start">
+                <div className="w-full text-3xl px-4 bg-theme-darker flex justify-between text-black  items-start">
                     <div className='flex flex-col justify-center items-center w-full'>
                         <img src={Logo} alt="" className='w-20 inline-block'/>
                         Join Learnode Today
@@ -164,18 +160,28 @@ export default function View(props) {
             >
                 <div className='w-full h-96 flex flex-col pt-5 gap-5 px-5'>
                     {view}
-
+                    
                     {props.form > 2 ? 
                     <button className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold' onClick={() => props.setForm(box => box +1)}>Submit</button> : 
                     <button className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500' onClick={() => props.setForm(box => box +1)}>Next Step</button>
                     }
 
                     {props.form > 1 ? 
-                    <button className='w-full h-10 rounded-md bg-gray-50 bg-opacity-5 text-xs text-green-400 ' onClick={() => handleBack()} >Back</button> : 
-                    <button className='w-full h-10 rounded-md bg-gray-50 bg-opacity-5 text-xs text-green-400 ' onClick={() => handleClick2()} >Already have an account? Login</button>
+                    <button className='w-full h-10 rounded-md bg-gray-200 text-xs font-semibold text-green-400' onClick={() => handleBack()} >Back</button> : 
+                    <button className='w-full h-10 rounded-md bg-gray-200 text-xs font-semibold text-green-400 ' onClick={() => handleClick2()} >Already have an account? Login</button>
                     }
                 </div>
         </Modal>
+
+
+        <div className='w-screen fixed grid grid-cols-12 h-16 items-center bg-learnode-green2 z-40 bottom-0'>
+        
+          <div className='col-span-1 flex items-center h-full relative'><img src={Logo1} alt="" className='w-96 rotate-45 mt-2 absolute'/></div>
+          <div className='text-lg font-middle flex justify-start items-center text-white col-span-10 h-full'><b className='mr-2'>Join the Learnode Community today! </b> {" "}Get the best experiene without Ads in videos.</div>
+          <div className='col-span-1 h-full flex justify-center pr-10 items-center'>
+          <button onClick={() => props.setSignUpModalOpen(true)}  className='bg-[#fff] text-[#111] rounded font-semibold text-xs  h-[30px] w-[75px] ' >Sign up </button>
+          </div>
+        </div>
 
 
       {/* <Modal title="Basic Modal" open={true} onOk={() => {}} onCancel={() => }>

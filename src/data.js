@@ -1,26 +1,5 @@
 export const rec_channels = [
     {
-      id: 1,
-      avatar: 'https://robohash.org/repellendusutaut.png?size=50x50&set=set1',
-      username: 'dlegrand0',
-      game_name: 'Lotstring',
-      rank: 37,
-    },
-    {
-      id: 2,
-      avatar: 'https://robohash.org/doloreiusrepudiandae.png?size=50x50&set=set1',
-      username: 'acharnick1',
-      game_name: 'Redhold',
-      rank: 49,
-    },
-    {
-      id: 3,
-      avatar: 'https://robohash.org/autametdolor.png?size=50x50&set=set1',
-      username: 'talwood2',
-      game_name: 'Transcof',
-      rank: 80,
-    },
-    {
       id: 4,
       avatar:
         'https://robohash.org/quaealiquidvoluptates.png?size=50x50&set=set1',
