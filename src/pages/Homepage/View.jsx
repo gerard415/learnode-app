@@ -4,7 +4,7 @@ import LiveChannels from '../../components/LiveChannels'
 
 export default function View() {
   return (
-    <div className='w-full h-full flex flex-col gap-10'>
+    <div className='w-full h-full flex bg-theme-darker flex-col gap-10'>
       <NavCategory categories={["All", "Cooking", "Gym", "Coding", "Games", "Videography", "Forex", "Martial Arts", "Repairs", "Well being", "Health"]} />
         {/* <Hero/> */}
         <div className='overflow-hidden w-full h-96 relative'>
@@ -13,7 +13,7 @@ export default function View() {
               <div className={"item grid grid-cols-12 " + (index == 0 ? "prev" : index == 1 ? "active" : index == 2 ? "next" : "")}>
                 <div className='w-max h-max rounded-sm bg-red-700 text-xs top-2 px-3 py-1 left-2 absolute text-white flex justify-center items-center'>Live</div>
                 <img alt='' className='col-span-9' src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gym-and-bodybuilding-youtube-thumbnail-design-template-4bf75ac296b4c72ff2221ff1ee2e8c25_screen.jpg?ts=1594926996" />
-                <div className='col-span-3 flex flex-col justify-start items-center gap-y-3 py-5 px-2 h-full bg-[#111]'>
+                <div className='col-span-3 flex flex-col justify-start items-center gap-y-3 py-5 px-2 h-full bg-theme-light-dark'>
                   <div className='w-14 h-14 overflow-hidden rounded-full'>
                     <img
                       className=' object-cover' 

@@ -21,7 +21,7 @@ export default function View(props) {
         <div className='col-span-10 flex flex-col gap-2'>
           <div>
             {props.title ?
-              <p className='text-md font-bold text-ellipsis w-full text-black'>{props.title}</p>
+              <p className='text-md font-bold text-ellipsis w-full card-title'>{props.title}</p>
               :
               ""
             }

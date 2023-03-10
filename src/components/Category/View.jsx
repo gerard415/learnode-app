@@ -3,8 +3,8 @@ import { CategoriesItem } from './CategoriesItem';
 
 export default function View(props) {
   return (
-    <div className='px-6 flex border-y border-gray-200 h-[450px] items-start justify-center overflow-hidden flex-col gap-5' >
-        <h2 className='text-xl font-semibold text-black'>
+    <div className='px-6 flex border-y border-gray-200 border-opacity-50 h-[450px] items-start justify-center overflow-hidden flex-col gap-5' >
+        <h2 className='text-xl font-semibold section-header '>
             Categories
         </h2>
         <div className='grid grid-cols-6 gap-3 '>

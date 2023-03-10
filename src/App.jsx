@@ -138,11 +138,12 @@ const App = () => {
 
           <div className='flex bg-theme-darker w-full' >
             <Sidebar/>
-            <div className='w-full ml-[230px] text-white h-max flex flex-col gap-y-16 px-5'>
+            <div className='w-full ml-[230px] bg-theme-darker text-white h-max flex flex-col gap-y-16 px-5'>
                 <Routes>
                   <Route path='/' element={<Homepage/>} />
                   <Route path='/subscriptions' element={<Subscription/>} />
-                  <Route path='/posts' element={<Posts/>} />
+                  <Route path='/categories' element={<Posts/>} />
+                  <Route path='/livestream' element={<Posts/>} />
                 </Routes>
             </div>
           </div>

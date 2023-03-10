@@ -4,11 +4,11 @@ import LiveChannels from '../../components/LiveChannels'
 
 export default function View() {
   return (
-    <div className='w-full h-full flex justify-start flex-col gap-10'>
+    <div className='w-full h-full major-subscription-color flex justify-start flex-col gap-10'>
       <NavCategory categories={["Videos", "Posts", "Polls", "Shorts", "Lives"]} />
 
       <div className='flex flex-col h-max w-full gap-5'>
-        <div className='text-lg text-black font-semibold'>Today</div>
+        <div className='text-lg  font-semibold'>Today</div>
         <div>
           <LiveChannels />
           <LiveChannels />
@@ -19,7 +19,7 @@ export default function View() {
       <hr />
 
       <div className='flex flex-col h-max w-full gap-5'>
-        <div className='text-lg text-black font-semibold'>Yesterday</div>
+        <div className='text-lg  font-semibold'>Yesterday</div>
         <div>
           <LiveChannels />
           <LiveChannels />

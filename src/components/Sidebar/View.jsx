@@ -12,7 +12,7 @@ export default function View(props) {
               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Home</p>
+            <p className='font-semibold text-sm' >Home</p>
           </div>
         </NavLink>
 
@@ -22,7 +22,7 @@ export default function View(props) {
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
             </svg>
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Subscriptions</p>
+            <p className='font-semibold text-sm' >Subscriptions</p>
           </div>
         </NavLink>
 
@@ -33,7 +33,7 @@ export default function View(props) {
             </svg>
 
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Categories</p>
+            <p className='font-semibold text-sm' >Categories</p>
           </div>
         </NavLink>
 
@@ -44,7 +44,7 @@ export default function View(props) {
             </svg>
 
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Livestreams</p>
+            <p className='font-semibold text-sm' >Livestreams</p>
           </div>
         </NavLink>
       </div>
@@ -58,7 +58,7 @@ export default function View(props) {
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122" />
             </svg>
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Library</p>
+            <p className='font-semibold text-sm' >Library</p>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ export default function View(props) {
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953l7.108-4.062A1.125 1.125 0 0121 8.688v8.123zM11.25 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953L9.567 7.71a1.125 1.125 0 011.683.977v8.123z" />
             </svg>
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Watched</p>
+            <p className='font-semibold text-sm' >Watched</p>
           </div>
         </div>
 
@@ -77,7 +77,7 @@ export default function View(props) {
             </svg>
 
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Yet to watch</p>
+            <p className='font-semibold text-sm' >Yet to watch</p>
           </div>
         </div>
 
@@ -87,7 +87,7 @@ export default function View(props) {
               <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
             </svg>
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Liked</p>
+            <p className='font-semibold text-sm' >Liked</p>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function View(props) {
 
       <div className='px-3 border-opacity-20 h-max overflow-hidden flex flex-col gap-3'>
         <div className='px-3'>
-          <p className='flex uppercase font-extrabold text-[13px] text-black '>
+          <p className='flex popular-subscribed-creators uppercase font-extrabold text-[13px] '>
             Popular creators
           </p>
         </div>
@@ -106,12 +106,12 @@ export default function View(props) {
             <div key={index} className='grid rounded-lg gap-x-5 items-center menu-item grid-cols-12 py-2 w-full px-3 transition-all duration-300 hover:cursor-pointer '>
               <img src={item.avatar} alt=''  className=' w-6 h-6 object-cover col-span-2' />
               <div className='h-full flex items-center justify-between col-span-10'>
-                <p className='font-semibold text-black text-sm' >{item.username}</p>
+                <p className='font-semibold text-sm' >{item.username}</p>
               </div>
             </div>
           ))}
 
-            <div  className='grid rounded-lg gap-x-5 border-green-400 border bg-green-400 bg-opacity-10 text-green-400 hover:bg-white grid-cols-12 py-2 w-full px-3 transition-all duration-300 hover:cursor-pointer '>
+            <div  className='grid rounded-lg gap-x-5 border-green-400 border bg-green-400 bg-opacity-10 text-green-400 hover:bg-transparent grid-cols-12 py-2 w-full px-3 transition-all duration-300 hover:cursor-pointer '>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 text-green-500 col-span-2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
               </svg>
@@ -134,7 +134,7 @@ export default function View(props) {
             </svg>
 
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Settings</p>
+            <p className='font-semibold text-sm' >Settings</p>
           </div>
         </div>
 
@@ -144,7 +144,7 @@ export default function View(props) {
           </svg>
 
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Creator desk</p>
+            <p className='font-semibold text-sm' >Creator desk</p>
           </div>
         </div>
 
@@ -154,7 +154,7 @@ export default function View(props) {
             </svg>
 
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Help</p>
+            <p className='font-semibold text-sm' >Help</p>
           </div>
         </div>
 
@@ -164,7 +164,7 @@ export default function View(props) {
           </svg>
 
           <div className='h-full flex items-center justify-between col-span-10'>
-            <p className='font-semibold text-black text-sm' >Request Features</p>
+            <p className='font-semibold text-sm' >Request Features</p>
           </div>
         </div>
       </div>
