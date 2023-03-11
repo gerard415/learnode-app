@@ -34,6 +34,10 @@ export default function View(props) {
         props.setLoginModalOpen(true)
     }
 
+    const onCancelLoginModal = () => {
+        props.setLoginModalOpen(false)
+    }
+
 
     if(!props.signUpModalOpen){
         props.setForm(1)

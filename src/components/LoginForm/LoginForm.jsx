@@ -9,12 +9,14 @@ export const LoginForm = (props) => {
         password: yup.string().required(),
     });
 
+    const emptyInput = {
+        name: '',
+        password: ''
+    };
+
     const {register, handleSubmit, watch, reset, formState: { errors }} = useForm({
         resolver: yupResolver(schema),
-        defaultValues: {
-            name: '',
-            password: ''
-          }
+        defaultValues: {...emptyInput}
     });
     const state = watch()
     const onSubmit = (data) => console.log(data)
@@ -35,7 +37,7 @@ export const LoginForm = (props) => {
                     <div className='text-green-400 text-xs hover:underline cursor-pointer mt-2 w-max'>Trouble signing in?</div>
                 </div>
 
-                <button disabled={!state.name || !state.password} type='submit' className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500 '>
+                <button disabled={!state.name || !state.password} onClick={() => console.log('logged in')} type='submit' className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500 '>
                     Log in
                 </button>
 
