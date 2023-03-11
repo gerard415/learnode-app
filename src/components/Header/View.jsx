@@ -3,9 +3,10 @@ import Logo from '../../assets/logo.png'
 import Logo1 from '../../assets/Logo1.PNG'
 import {AiOutlineUser} from 'react-icons/ai'
 import { Modal } from 'antd';
-import {Form1, Form2, Form3} from '../SignupForms'
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Switch } from 'antd';
+import {LoginForm} from '../LoginForm'
+import {Form} from '../SignupForms'
 
 
 
@@ -15,7 +16,7 @@ export default function View(props) {
     useEffect(() => {
         let theme = document.querySelector('body').classList[0]
         // console.log(theme)
-        if(theme == "theme-light"){
+        if(theme === "theme-light"){
             settheme("light")
         }else{
             settheme("dark")
@@ -33,23 +34,6 @@ export default function View(props) {
         props.setLoginModalOpen(true)
     }
 
-    const handleBack = () => {
-        if(props.form >= 3){
-            props.setForm(2)
-        }else{
-            props.setForm(1)
-        }
-    }
-
-    let view = null
-
-    if(props.form === 1){
-        view = <Form1/>
-    }else if(props.form === 2){
-        view = <Form2/>
-    }else{
-        view = <Form3/>
-    }
 
     if(!props.signUpModalOpen){
         props.setForm(1)
@@ -59,7 +43,7 @@ export default function View(props) {
         let theme = document.querySelector('body').classList[0]
 
         console.log(theme)
-        if(theme == "theme-light"){
+        if(theme === "theme-light"){
             settheme("light")
             document.querySelector('body').classList.remove(theme)
             document.querySelector('body').classList.add("theme-dark")
@@ -113,7 +97,7 @@ export default function View(props) {
             <button onClick={() => props.setSignUpModalOpen(true)}  className='bg-learnode-green1 hover:bg-opacity-100 bg-opacity-80 text-white rounded font-semibold  h-[30px] w-[75px] ' >Sign up</button>
             
             <Dropdown menu={{ items }} trigger={['click']}>
-                <a onClick={(e) => e.preventDefault()}>
+                <a href='1' onClick={(e) => e.preventDefault()}>
                 <Space>
                     <AiOutlineUser size={'20px'} className="avatar-icon cursor-pointer" />
                 </Space>
@@ -161,27 +145,7 @@ export default function View(props) {
             onOk={() => props.setLoginModalOpen(false)}
             onCancel={() => props.setLoginModalOpen(false)}
             >
-                <div className='w-full h-96 flex flex-col pt-5 gap-5 px-5'>
-                    <div className='w-full flex flex-col gap-2'>
-                        <div className='font-semibold'>Username</div>
-                        <input className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 ring-1 ring-gray-400 bg-opacity-10 bg-transparent' />
-                    </div>
-
-                    <div className='w-full flex flex-col gap-2'>
-                        <div className='font-semibold'>Password</div>
-                        <input type="password" className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 ring-1 ring-gray-400 bg-opacity-10 bg-transparent' />
-                        <div className='text-green-400 text-xs hover:underline cursor-pointer mt-2 w-max'>Trouble signing in?</div>
-                    </div>
-
-                    <button className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold'>
-                        Log in
-                    </button>
-
-
-                    <button className='w-full h-10 rounded-md bg-gray-200 text-xs font-semibold text-green-400' onClick={() => handleClick1()} >
-                        Don't have an account? Sign up
-                    </button>
-                </div>
+                <LoginForm handleClick1={handleClick1} />
         </Modal>
 
         <Modal
@@ -222,36 +186,18 @@ export default function View(props) {
             onCancel={() => props.setSignUpModalOpen(false)}
             >
                 <div className='w-full h-96 flex flex-col pt-5 gap-5 px-5'>
-                    {view}
-                    
-                    {props.form > 2 ? 
-                    <button className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold' onClick={() => props.setForm(box => box +1)}>Submit</button> : 
-                    <button className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500' onClick={() => props.setForm(box => box +1)}>Next Step</button>
-                    }
-
-                    {props.form > 1 ? 
-                    <button className='w-full h-10 rounded-md bg-gray-200 text-xs font-semibold text-green-400' onClick={() => handleBack()} >Back</button> : 
-                    <button className='w-full h-10 rounded-md bg-gray-200 text-xs font-semibold text-green-400 ' onClick={() => handleClick2()} >Already have an account? Login</button>
-                    }
+                    <Form handleClick2={handleClick2} />
                 </div>
         </Modal>
 
 
         <div className='w-screen fixed grid grid-cols-12 h-16 items-center bg-learnode-green2 z-40 bottom-0'>
-        
           <div className='col-span-1 flex items-center h-full relative'><img src={Logo1} alt="" className='w-96 rotate-45 mt-2 absolute'/></div>
           <div className='text-lg font-middle flex justify-start items-center text-white col-span-10 h-full'><b className='mr-2'>Join the Learnode Community today! </b> {" "}Get the best experiene without Ads in videos.</div>
           <div className='col-span-1 h-full flex justify-center pr-10 items-center'>
           <button onClick={() => props.setSignUpModalOpen(true)}  className='bg-[#fff] text-[#111] rounded font-semibold text-xs  h-[30px] w-[75px] ' >Sign up </button>
           </div>
         </div>
-
-
-      {/* <Modal title="Basic Modal" open={true} onOk={() => {}} onCancel={() => }>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal> */}
     </>
   )
 }
