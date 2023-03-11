@@ -141,6 +141,7 @@ export default function View(props) {
                     </div>
                 </div>
             }
+            destroyOnClose
             closeIcon={<div></div>}
             // bodyStyle={{backgroundColor: "#14141", background: "#14141"}}
             centered
@@ -149,7 +150,7 @@ export default function View(props) {
             onOk={() => props.setLoginModalOpen(false)}
             onCancel={() => props.setLoginModalOpen(false)}
             >
-                <LoginForm handleClick1={handleClick1} />
+                <LoginForm handleClick1={handleClick1} preserve={false} />
         </Modal>
 
         <Modal
@@ -181,6 +182,7 @@ export default function View(props) {
                     </div>
                 </div>
             }
+            destroyOnClose
             closeIcon={<div></div>}
             bodyStyle={{backgroundColor: "#14141", background: "#14141"}}
             centered

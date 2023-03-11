@@ -14,11 +14,13 @@ export const Form = (props) => {
         name: yup.string().required(),
         email: yup.string().email().required(),
         password: yup.string().min(8).max(20).required(),
+        token:yup.number().integer()
     });
 
     const emptyInput = {
         name: '',
-        password: ''
+        password: '',
+        email:''
     };
 
     const {register, handleSubmit, formState:{errors}, watch} = useForm({resolver: yupResolver(schema), defaultValues: {...emptyInput}});
@@ -54,7 +56,7 @@ export const Form = (props) => {
             <div className='w-full h-96 flex flex-col pt-5 gap-5 px-5' >
                 {view}
 
-                {form >=  3 && <button type='submit' className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold'>Submit</button>} 
+                {form >=  3 && <button disabled={isNaN(state.token) || !state.token} type='submit' className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500 '>Submit</button>} 
                 {form === 1 && <button disabled={!state.name || state.password.length < 8} type='button' className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500' onClick={() => setForm(prevState => prevState +1)}>Next Step</button>}
                 {form === 2 && <button disabled={!state.email} type='button' className='w-full mt-5 h-10 rounded-md bg-learnode-green1 bg-opacity-10 font-semibold disabled:bg-gray-300 disabled:bg-opacity-9 disabled:text-gray-500' onClick={() => setForm(prevState => prevState +1)}>Next Step</button>}
 

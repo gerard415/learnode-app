@@ -28,7 +28,7 @@ export const LoginForm = (props) => {
             <div className='w-full h-96 flex flex-col pt-5 gap-5 px-5'>
                 <div className='w-full flex flex-col gap-2'>
                     <div className='text-black font-semibold'>Username</div>
-                    <input {...register("name")} className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 ring-1 ring-gray-400 text-black bg-opacity-10 bg-white' />
+                    <input  {...register("name")} className='w-full focus:ring-green-400 focus:ring-2 h-10 rounded-md outline-none px-5 ring-1 ring-gray-400 text-black bg-opacity-10 bg-white' />
                 </div>
 
                 <div className='w-full flex flex-col gap-2'>
