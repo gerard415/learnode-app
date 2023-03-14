@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Header, Sidebar } from './components'
-import {Homepage, Subscription, Posts} from './pages'
+import {Homepage, Subscription, Posts, Watch} from './pages'
 
 
 const App = () => {
@@ -126,6 +126,7 @@ const App = () => {
                   <Route path='/' element={<Homepage/>} />
                   <Route path='/subscriptions' element={<Subscription/>} />
                   <Route path='/posts' element={<Posts/>} />
+                  <Route path='/watch' element={<Watch/>} />
                 </Routes>
             </div>
           </div>
@@ -144,6 +145,7 @@ const App = () => {
                   <Route path='/subscriptions' element={<Subscription/>} />
                   <Route path='/categories' element={<Posts/>} />
                   <Route path='/livestream' element={<Posts/>} />
+                  <Route path='/watch' element={<Watch/>} />
                 </Routes>
             </div>
           </div>
@@ -157,6 +159,7 @@ const App = () => {
   //       <Route path='/' element={<Homepage/>} />
   //       <Route path='/subscriptions' element={<Subscription/>} />
   //       <Route path='/posts' element={<Posts/>} />
+  //       <Route path='/watch' element={<Watch/>} />
   //     </Routes>
   //   </BrowserRouter>
   // )

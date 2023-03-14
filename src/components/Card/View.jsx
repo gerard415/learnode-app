@@ -1,12 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function View(props) {
   return (
     <div className='w-full video-card h-[220px]'>
       {props.image ?
-          <div className='h-[150px] col-span-2 overflow-hidden bg-gray-100 rounded-lg'>
+          <Link to='/watch'><div  className='h-[150px] col-span-2 overflow-hidden bg-gray-100 rounded-lg'>
             <img src={props.image} alt='' className='w-full h-full cursor-pointer' style={{height:'150px'}} />
-          </div>
+          </div> 
+          </Link>
           :
           ""
       }
@@ -21,7 +23,8 @@ export default function View(props) {
         <div className='col-span-10 flex flex-col gap-2'>
           <div>
             {props.title ?
-              <p className='text-md font-bold text-ellipsis w-full card-title'>{props.title}</p>
+             <Link to={'/watch?v=' + props.title}> <p className='text-md font-bold text-ellipsis w-full card-title'>{props.title}</p>
+             </Link>
               :
               ""
             }
